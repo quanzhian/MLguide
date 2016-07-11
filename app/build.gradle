@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.mlxing.mlguide"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        // dex突破65535的限制
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        debug {
+            // No debug config
+        }
+
+        release {
+            storeFile file("../mlxingzyt.keystore")
+            storePassword "mlxingcom20150518"
+            keyAlias "androiddebugkey"
+            keyPassword "mlxingcom20150518"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:cardview-v7:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+
+    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+    compile 'com.zhy:okhttputils:2.6.1'
+
+    compile 'com.jakewharton:butterknife:8.1.0'
+    apt 'com.jakewharton:butterknife-compiler:8.1.0'
+
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'
+
+    compile 'org.greenrobot:eventbus:3.0.0'
+
+    //banner循环轮播
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+
+    //底部tab
+    compile 'homhomlin.lib:apsts:1.4.0'
+
+    // 图片显示库
+    compile 'com.bm.photoview:library:1.4.0'
+
+    //Android 万能的Adapter for ListView,RecyclerView,GridView等，支持多种Item类型的情况
+    //compile 'com.zhy:base-adapter:2.0.0'
+}

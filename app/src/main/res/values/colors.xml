@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF5450</color>
+    <color name="colorPrimaryDark">#e9796b</color>
+    <color name="colorAccent">#b60005</color>
+
+    <color name="google_red">#d62d20</color>
+    <color name="google_blue">#0057e7</color>
+    <color name="google_green">#008744</color>
+    <color name="google_yellow">#ffa700</color>
+
+    <!-- 半透明黑色 -->
+    <color name="black_overlay">#66000000</color>
+
+
+    <!-- tab -->
+    <color name="home_bar_text_normal">#ffffff</color>
+    <color name="textnormal">#000000</color>
+
+    <color name="btn_bg_pressed_color">#ffacac</color>
+    <color name="btn_bg_color">#ff5959</color>
+
+</resources>

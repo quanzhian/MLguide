@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><!--最新栏目的新闻-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout="@layout/preference_item"
+    android:title="@string/action_setting">
+
+    <PreferenceCategory
+        android:layout="@layout/preference_category_widget"
+        android:title="基本设置">
+        <CheckBoxPreference
+            android:key="@string/save_net_mode"
+            android:layout="@layout/preference_item"
+            android:summary="仅在Wi-Fi环境下才自动加载图片"
+            android:title="省流量模式"
+            android:widgetLayout="@layout/switch_layout" />
+
+        <CheckBoxPreference
+            android:key="@string/save_net_mode"
+            android:layout="@layout/preference_item"
+            android:summary="向客户端推送热点新闻"
+            android:title="接收推送通知"
+            android:widgetLayout="@layout/switch_layout" />
+        <Preference
+            android:layout="@layout/preference_item"
+            android:summary="删除已缓存的文章内容及图片"
+            android:title="清空缓存" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:layout="@layout/preference_category_widget"
+        android:title="其他说明">
+        <Preference
+            android:layout="@layout/preference_item"
+            android:summary="V 1.0"
+            android:title="当前版本" />
+        <Preference
+            android:layout="@layout/preference_item"
+            android:summary="http://www.mlxing.com/"
+            android:title="关于我们" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
